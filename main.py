@@ -1,5 +1,6 @@
 from time import perf_counter
 
+#new algorithm
 def expt(x, n):
   if n < 0:
     raise ValueError("n = {} is less than zero".format(n))
@@ -12,6 +13,7 @@ def expt(x, n):
   else:
     return x * expt(x, n - 1)
 
+# old algorithm 
 def old_expt(x, n):
   if n < 0:
     raise ValueError("n = {} is less than zero".format(n))
@@ -50,6 +52,7 @@ def main():
     print(f"Writing exponent {exponent}")
     f.write(f"{exponent},{min_runtime_old},{min_runtime_new}\n")
   f.close()
+  
     
     
 if __name__ == '__main__':
